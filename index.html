@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Ultimate HTML Pro Notes - Complete Basic to Advanced Guide with SEO & Accessibility.">
+    <meta name="keywords" content="HTML5, Web Development, SEO, Accessibility, Pro Notes, Frontend">
+    <meta name="author" content="Frontend Learner">
+    
+    <title>HTML Pro Masterclass | Zero to Hero</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    
+    <style>
+        /* CSS internal styling for visual presentation of the notes */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; max-width: 1100px; margin: auto; padding: 30px; background-color: #f0f2f5; }
+        
+        /* Header: The top branding section */
+        header { background: #1e272e; color: #00d8d6; padding: 50px; text-align: center; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        
+        /* Section: Used to group related content together. Good for SEO and structure. */
+        section { background: white; padding: 35px; margin-bottom: 35px; border-radius: 15px; border-left: 8px solid #05c46b; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        h2 { color: #1e272e; font-size: 1.8rem; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: #d35400; margin-top: 25px; }
+        
+        /* Code: Used for small inline snippets of code */
+        code { background: #fdf2e9; color: #e67e22; padding: 3px 6px; border-radius: 4px; font-weight: bold; font-family: 'Courier New', monospace; }
+        
+        /* Pre: Stands for 'Preformatted'. It keeps your spaces and line breaks exactly as written in the editor. */
+        pre { background: #1e272e; color: #d1d8e0; padding: 20px; border-radius: 10px; overflow-x: auto; font-size: 0.95rem; line-height: 1.4; border: 1px solid #1a252f; }
+        
+        .comment-text { color: #27ae60; font-weight: bold; background: #eafaf1; padding: 10px; border-radius: 5px; display: block; margin: 10px 0; border-left: 3px solid #2ecc71; }
+        .pro-tip { background: #fff9db; border: 1px dashed #fab005; padding: 15px; border-radius: 8px; margin: 15px 0; color: #856404; font-weight: 500; }
+        
+        /* Table Styling */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { border: 1px solid #dee2e6; padding: 15px; text-align: center; }
+        th { background-color: #05c46b; color: white; }
+        tr:nth-child(even) { background-color: #f8f9fa; }
+        
+        .tag-desc { color: #7f8c8d; font-size: 0.9rem; font-style: italic; }
+        .advance-label { background: #e74c3c; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; vertical-align: middle; text-transform: uppercase; }
+        .aria-label-box { background: #e0f7fa; padding: 10px; border-radius: 5px; font-size: 0.9rem; margin-top: 10px; border: 1px solid #b2ebf2; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>HTML5 God-Level Documentation</h1>
+    <p>Professional Standards | SEO Optimized | Accessibility Focused</p>
+</header>
+
+<section>
+    <h2>Chapter 0: Introduction to Web & Head</h2>
+    <p><b>HTML (Hyper Text Markup Language):</b> It is the standard language for creating the structure of web pages.</p>
+    
+    <span class="comment-text">// Explanation: HTML provides the "Skeleton", CSS provides the "Skin/Clothes", and JS provides the "Brain/Action".</span>
+    
+    <div class="pro-tip">
+        <b>SEO Tip:</b> The <code>&lt;meta name="description"&gt;</code> is what users see on Google search results. Keep it under 160 characters.
+    </div>
+
+    <ul>
+        <li><b>HyperText:</b> Links that connect web pages.</li>
+        <li><b>Markup:</b> Using tags to tell the browser how to display content.</li>
+        <li><b>Head Section:</b> Contains data for the browser (Favicons, Scripts, Meta).</li>
+    </ul>
+
+    <pre>
+&lt;!-- Connecting JavaScript --&gt;
+&lt;script src="script.js" defer&gt;&lt;/script&gt; 
+&lt;!-- 'defer' loads script after HTML is parsed. 
+     This prevents the website from freezing while JS loads. --&gt;
+    </pre>
+</section>
+
+<section>
+    <h2>Chapter 1: Basics & Text Formatting</h2>
+    
+    <h3>1. Headings & Paragraphs</h3>
+    <h1>This is Heading 1 (Biggest - Use for Main Title)</h1>
+    <h3>This is Heading 3 (Used for Sections)</h3>
+    <h6>This is Heading 6 (Smallest Heading)</h6>
+    
+    <p>This is a paragraph tag <code>&lt;p&gt;</code>. To break a line use <code>&lt;br&gt;</code> <br> like this.</p>
+    
+    <h3>2. Text Formatting Tags</h3>
+    <p>
+        <b>Bold Text</b> (Physical style) <br>
+        <strong>Strong Text</strong> (Important for SEO/Google) <br>
+        <i>Italic Text</i> <br>
+        <em>Emphasized Text</em> (Stressed word) <br>
+        <u>Underlined Text</u> <br>
+        <mark>Highlighted Text</mark> (Yellow background) <br>
+        <del>Deleted Text</del> (Strikethrough) <br>
+        <code>Computer Code Text</code> <br>
+        <small>Smaller Text</small>
+    </p>
+
+    <div class="aria-label-box">
+        <b>Accessibility (ARIA):</b> If you use a <code>&lt;div&gt;</code> as a button, you MUST add: <br>
+        <code>&lt;div role="button" aria-label="Submit Form"&gt;Click Me&lt;/div&gt;</code>
+    </div>
+
+    <h3>3. Math & Chemistry (Sub/Sup)</h3>
+    <p>Chemistry: H<sub>2</sub>O (Subscript: goes below)</p>
+    <p>Math: (a+b)<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup> + 2ab (Superscript: goes above)</p>
+</section>
+
+<section>
+    <h2>Chapter 2: Links, Media & Paths</h2>
+    
+    <h3>1. Anchor Tags (Links)</h3>
+    <p>To link to another page:</p>
+    <a href="https://www.google.com" target="_blank" rel="noopener">Visit Google in New Tab</a>
+    <span class="comment-text">// Note: rel="noopener" is a pro security practice for target="_blank".</span>
+
+    <h3>2. Images</h3>
+    <img src="https://via.placeholder.com/300x150" alt="Detailed description for blind users" title="Tooltip on hover" width="300">
+    <span class="comment-text">// Note: 'alt' helps Google SEO and Screen Readers.</span>
+
+    <h3>3. Audio & Video <span class="advance-label">Advance</span></h3>
+    <video width="400" controls poster="https://via.placeholder.com/400x200">
+        <source src="movie.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+    <br>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<section>
+    <h2>Chapter 3: Page Layout & Semantics <span class="advance-label">Pro</span></h2>
+    <p>Modern HTML uses <b>Semantic Tags</b> to tell Google what the content is.</p>
+
+    
+
+    <pre>
+&lt;header&gt; - Navigation, Logo, Search bar &lt;/header&gt;
+&lt;main&gt; - Unique content of the page &lt;/main&gt;
+&lt;section&gt; - Groups related content &lt;/section&gt;
+&lt;article&gt; - Blog posts / news items &lt;/article&gt;
+&lt;aside&gt; - Sidebar or Ads &lt;/aside&gt;
+&lt;footer&gt; - Copyright & Contact &lt;/footer&gt;
+    </pre>
+
+    <h3>Div vs Span</h3>
+    <div style="background: #eee; border: 1px solid #ccc; padding: 10px;">
+        <b>Div:</b> Block-level. Starts on new line, full width.
+    </div>
+    <p>We use <span style="color: blue; font-weight: bold;">Span</span> as an inline-element inside paragraphs.</p>
+</section>
+
+<section>
+    <h2>Chapter 4: Lists & Tables (Advanced)</h2>
+    
+    <h3>1. Types of Lists</h3>
+    <ul><li>Unordered (Bullets)</li></ul>
+    <ol type="A"><li>Ordered (A, B, C)</li></ol>
+    <dl><dt>Coffee</dt><dd>Black hot drink</dd></dl>
+
+    <h3>2. Tables (Complete Structure with Spans)</h3>
+    <table>
+        <caption>Employee Schedule 2026</caption>
+        <thead> <tr>
+                <th>Days</th>
+                <th>8am - 10am</th>
+                <th>10am - 12pm</th>
+                <th>Salary Status</th>
+            </tr>
+        </thead>
+        <tbody> <tr>
+                <td>Monday</td>
+                <td colspan="2">Web Workshop (Merged Col)</td>
+                <td>$5000</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Tue/Wed</td>
+                <td>HTML Basics</td>
+                <td>CSS Basics</td>
+                <td rowspan="2">Pending</td>
+            </tr>
+            <tr>
+                <td>JS Basics</td>
+                <td>React Basics</td>
+            </tr>
+        </tbody>
+        <tfoot> <tr>
+                <th colspan="3">Total Expense</th>
+                <td>$5000</td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+<section>
+    <h2>Chapter 5: Next-Gen Forms & Validation</h2>
+    <form>
+        <fieldset> <legend>User Personal Info</legend>
+            
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" placeholder="Enter Name" required>
+            
+            <br><br>
+            
+            <label>Email (Auto-Validation):</label>
+            <input type="email" required placeholder="user@mail.com">
+
+            <br><br>
+            
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="m"> Male
+            <input type="radio" name="gender" value="f"> Female
+            
+            <br><br>
+
+            <label>Choose Browser (Datalist):</label>
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Chrome"><option value="Firefox"><option value="Safari">
+            </datalist>
+
+            <br><br>
+
+            <label>Phone Number:</label>
+            <input type="tel" pattern="[0-9]{4}-[0-9]{7}" placeholder="0300-1234567">
+            
+            <br><br>
+
+            <label>Color & Range:</label>
+            <input type="color"> <input type="range" min="0" max="100">
+
+            <br><br>
+            
+            <input type="submit" value="Submit Registration">
+            <input type="reset" value="Clear Form">
+        </fieldset>
+    </form>
+</section>
+
+<section>
+    <h2>Chapter 6: Extra Pro Concepts</h2>
+    <h3>1. HTML Entities</h3>
+    <ul>
+        <li>Copyright: &copy; (<code>&amp;copy;</code>)</li>
+        <li>Registered: &reg; (<code>&amp;reg;</code>)</li>
+        <li>Non-breaking Space: <code>&amp;nbsp;</code> (Forces text to stay together)</li>
+    </ul>
+
+    <h3>2. JavaScript Connection</h3>
+    <ol>
+        <li><b>Inline:</b> <code>&lt;button onclick="alert()"&gt;</code></li>
+        <li><b>Internal:</b> Using <code>&lt;script&gt;</code> tag.</li>
+        <li><b>External:</b> <code>&lt;script src="main.js"&gt;</code></li>
+    </ol>
+
+    <h3>3. Iframes</h3>
+    <iframe src="https://www.wikipedia.org" width="100%" height="200" style="border:none;"></iframe>
+</section>
+
+<footer>
+    <p style="text-align: center; color: #7f8c8d;">&copy; 2026 Professional HTML Learning Guide. Verified "God-Level" Status.</p>
+</footer>
+
+</body>
+</html>
