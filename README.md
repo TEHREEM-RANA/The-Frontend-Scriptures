@@ -1,4 +1,4 @@
-# 🏛️ The Modern Frontend Encyclopedia (v1.0.0)
+#  The Modern Frontend Encyclopedia (v1.0.0)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Level: Zero to Hero](https://img.shields.io/badge/Level-God--Level-blueviolet)](https://github.com/TEHREEM-RANA)
@@ -8,7 +8,7 @@
 
 ---
 
-## 🗺️ Engineering Roadmap
+##  Engineering Roadmap
 
 This encyclopedia is categorized into three distinct layers of frontend mastery, optimized for the 2026 web ecosystem:
 
@@ -30,21 +30,21 @@ This encyclopedia is categorized into three distinct layers of frontend mastery,
 
 ---
 
-## 📚 Technical Modules
+##  Technical Modules
 
-### 🏗️ Phase 1: Semantic HTML5 Architecture
+###  Phase 1: Semantic HTML5 Architecture
 * **Head Optimization:** Mastering `async` vs `defer` and pre-fetching strategies.
 * **Structural Semantics:** Proper implementation of `<main>`, `<article>`, and `<section>` for SEO.
 * **Modern Forms:** Advanced validation using Regex patterns, `datalist`, and custom attributes.
 * **Accessibility:** Integrating ARIA roles and landmarks for professional-grade A11Y.
 
-### 🎨 Phase 2: High-Performance CSS3
+###  Phase 2: High-Performance CSS3
 * **Layout Mastery:** Deep-dive into Flex-basis, Grid-template-areas, and Stacking Contexts.
 * **Modern Design:** Glassmorphism, CSS Variable (Tokens) management, and Dark Mode logic.
 * **Responsive Units:** Using `clamp()`, `vmax/vmin`, and `aspect-ratio` for fluid layouts.
 * **Optimization:** Reducing Reflows and Repaints by animating only `transform` and `opacity`.
 
-### 🧠 Phase 3: The JavaScript Engine (EcmaScript 2026+)
+###  Phase 3: The JavaScript Engine (EcmaScript 2026+)
 * **Memory Management:** Detailed analysis of the Stack vs. Heap and Garbage Collection.
 * **Advanced Logic:** Closures, Currying, Higher-Order Functions, and Private Class Fields (`#`).
 * **Async/Await Patterns:** Promise concurrency with `Promise.allSettled` and safe API fetching.
@@ -52,7 +52,7 @@ This encyclopedia is categorized into three distinct layers of frontend mastery,
 
 ---
 
-## 🛠️ Usage & Navigation
+##  Usage & Navigation
 
 1.  **Clone the Repository:** ```bash
     git clone [https://github.com/TEHREEM-RANA/Modern-Frontend-Encyclopedia.git](https://github.com/TEHREEM-RANA/Modern-Frontend-Encyclopedia.git)
@@ -62,7 +62,7 @@ This encyclopedia is categorized into three distinct layers of frontend mastery,
 
 ---
 
-## 🎯 Interview Gold (The Master Secrets)
+##  Interview Gold (The Master Secrets)
 
 This repository includes a dedicated section for "Interview Secrets," covering topics often missed by standard courses:
 * The **Temporal Dead Zone (TDZ)** and Hoisting behavior.
