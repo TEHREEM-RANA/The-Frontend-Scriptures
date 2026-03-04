@@ -1,10 +1,10 @@
-# 🏛️ The Modern Frontend Encyclopedia
+#  The Modern Frontend Encyclopedia
 
 **"Writing code is easy; writing professional code is an art."** This repository serves as the ultimate asset for my web development journey. It contains everything from fundamental tags to "God-Level" industry standards, complete with documentation, code snippets, and architectural logic.
 
 ---
 
-## 🚀 Progress Roadmap (The Trinity)
+##  Progress Roadmap (The Trinity)
 
 This repository is structured into three major phases of frontend mastery:
 
@@ -25,7 +25,7 @@ This repository is structured into three major phases of frontend mastery:
 
 ---
 
-## 📂 Phase 1: HTML5 (Current Module)
+##  Phase 1: HTML5 (Current Module)
 The current focus is the **"God-Level"** HTML5 documentation, featuring:
 
 * **Chapter 0-1:** Head Section, Meta Tags, and Advanced Typography.
@@ -36,7 +36,7 @@ The current focus is the **"God-Level"** HTML5 documentation, featuring:
 
 ---
 
-## 🛠️ How to Navigate
+##  How to Navigate
 1.  **Clone:** `git clone https://github.com/TEHREEM-RANA/Modern-Frontend-Encyclopedia.git`
 2.  **Open:** Launch `index.html` to view the notes as a structured, interactive web page.
 3.  **Learn:** Read the internal comments (`//` or ``) for pro-tips and logic explanations.
