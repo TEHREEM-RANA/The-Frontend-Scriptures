@@ -37,7 +37,7 @@ The current focus is the **"God-Level"** HTML5 documentation, featuring:
 ---
 
 ## 🛠️ How to Navigate
-1.  **Clone:** `git clone https://github.com/YOUR_USERNAME/Modern-Frontend-Encyclopedia.git`
+1.  **Clone:** `git clone https://github.com/TEHREEM-RANA/Modern-Frontend-Encyclopedia.git`
 2.  **Open:** Launch `index.html` to view the notes as a structured, interactive web page.
 3.  **Learn:** Read the internal comments (`//` or ``) for pro-tips and logic explanations.
 
@@ -50,4 +50,4 @@ The current focus is the **"God-Level"** HTML5 documentation, featuring:
 
 ---
 
-**Made with 💻 and ☕ by [Your Name]** *If you find these notes helpful, don't forget to give this repository a ⭐ Star!*
+**Made with 💻 and ☕ by Tehreem Rana** *If you find these notes helpful, don't forget to give this repository a ⭐ Star!*
