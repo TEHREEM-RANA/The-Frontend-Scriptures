@@ -1,0 +1,359 @@
+/* ==========================================================================
+   MASTER CSS DOCUMENTATION: FROM ZERO TO ADVANCED PRO
+   ==========================================================================
+   Author: Tehreem Rana 
+   Note: This file contains everything you need to master CSS. 
+   Follow the Chapters in sequence.
+   ==========================================================================
+*/
+
+/* CHAPTER 0: THE FUNDAMENTALS & RESET 
+   -----------------------------------
+  First, it is necessary to clear the browser's default settings.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Elements don't grow beyond their width due to padding/border */
+    outline: none;
+}
+
+:root {
+    /* ADVANCED: CSS Variables (Change it in one place, and it will change across the entire website). */
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --dark-bg: #2c3e50;
+    --light-text: #f4f4f4;
+    --transition-fast: 0.3s ease;
+}
+
+/* 🚀 PRO TIP: Dark Mode Logic
+   Just by adding a class to the body in JS, all these colors flip!
+*/
+body.dark-mode {
+    --primary-color: #2980b9;
+    --dark-bg: #f4f4f4;
+    --light-text: #2c3e50;
+    background-color: #1a1a1a;
+    color: var(--light-text);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+
+/* CHAPTER 1: SELECTORS (How to target elements)
+   ---------------------------------------------
+*/
+
+/* 1. Element Selector (All p tags will be targeted) */
+p { color: gray; }
+
+/* 2. Class Selector (Best for multiple elements) */
+.card { background: white; border-radius: 8px; }
+
+/* 3. ID Selector (Used only for one unique element). */
+#main-header { font-size: 24px; }
+
+/* 4. Descendant Selector (Only the p tags that are inside a div). */
+div p { color: blue; }
+
+/* 5. Attribute Selector (Specific targetting) */
+input[type="text"] { border: 1px solid #ccc; }
+
+/* 6. Pseudo-Classes (State of element) */
+.nav-link:hover { color: var(--primary-color); }
+.list-item:nth-child(even) { background: #eee; } /* Target specific children */
+.input-field:focus { border-color: blue; } /* When clicking inside input */
+
+/* 7. Combinators (Relationship targetting) */
+div + p { margin-top: 10px; }  /* Adjacent Sibling: P right after DIV */
+div ~ p { color: red; }        /* General Sibling: All P's after DIV */
+
+/* CHAPTER 1.5: SPECIFICITY (Who wins the fight?)
+   ----------------------------------------------
+   If two rules target the same element, the one with higher points wins:
+   1. Inline style (style="")    = 1000 points
+   2. IDs (#header)              = 100 points
+   3. Classes/Pseudo-classes     = 10 points
+   4. Elements (p, div)          = 1 point
+   5. Universal (*)              = 0 points
+   
+   ⚠️ !important: The "Nuclear Option". Overwrites everything. (Use sparingly!)
+*/
+
+
+/* CHAPTER 2: COLORS & BACKGROUNDS (The Visuals)
+   ---------------------------------------------
+*/
+
+.box-visuals {
+    /* Ways to write colors */
+    color: white;                    /* Color Name */
+    background-color: #ff5733;       /* Hex Code */
+    background-color: rgb(255, 0, 0);/* RGB */
+    background-color: rgba(0,0,0,0.5);/* RGBA (A means Opacity/Transparency) */
+    
+    /* Advanced Backgrounds */
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background-size: cover;          /* Image  cover full screen  */
+    background-position: center;     /* The image will remain in the center. */
+}
+
+
+/* CHAPTER 3: THE BOX MODEL (The Core Concept)
+   -------------------------------------------
+   [Margin -> Border -> Padding -> Content]
+*/
+/* 🚀 PRO TIP: box-sizing: border-box 
+   Without this, if you have a 100px box and add 20px padding, the box 
+   becomes 140px. With border-box, the box STAYS 100px. (Essential!) 
+*/
+.box-model-demo {
+    width: 300px;
+    padding: 20px;       /* Inside space */
+    border: 5px solid #000;
+    margin: 25px auto;   /* Outside space (auto centers the block) */
+    display: block;      /* Takes full width */
+}
+
+.overlap-card {
+    margin-top: -50px; /* Moves element UP, overlapping the one above it */
+}
+
+/* 🚀 INTERVIEW TIP: Margin Collapsing
+When the vertical margins of two elements meet, they do not add together; instead, the larger margin takes effect.
+
+/* CHAPTER 4: TYPOGRAPHY (Fonts & Text)
+   ------------------------------------
+*/
+
+.text-styling {
+    font-size: 1.2rem;       /* Responsive units (rem/em) */
+    font-weight: bold;       /* Thickness */
+    text-align: center;      /* left, right, justify */
+    text-transform: capitalize; /* uppercase, lowercase */
+    letter-spacing: 2px;     /* Characters ke darmiyan space */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* PRO Look */
+}
+
+
+/* CHAPTER 5: DISPLAY & POSITIONING
+   --------------------------------
+*/
+/* 🚀 PRO RULE: Z-Index does NOT work on static elements. 
+   Element must have position: relative, absolute, or fixed. */
+.parent { isolation: isolate; } /* Advanced: Creates a new stacking context */
+
+.inline-vs-block {
+    display: inline;         /* Takes only as much space as the content (width/height do not work) */
+    display: block;          /* Covers the entire line */
+    display: inline-block;   /* Has features of both (remains inline but width can be changed) */
+    display: none;           /* Element disappears (removes from layout) */
+}
+
+.position-mastery {
+    position: relative;      /* Moves according to its original position */
+    position: absolute;      /* Moves according to the nearest relative parent */
+    position: fixed;         /* Sticks to the screen (e.g., Chat icon) */
+    position: sticky;        /* Stops at a position while scrolling (e.g., Navbar) */
+    top: 0;
+    z-index: 100;            /* Layers: Higher number means it will appear in front */
+}
+
+/* CHAPTER 5.5: THE "FIXERS"
+   -------------------------
+*/
+.prevent-mess {
+    overflow: hidden;      /* Crops children that leak out */
+    overflow-y: auto;      /* Adds scrollbar only if content is too long */
+    white-space: nowrap;   /* Keeps text in one line */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+}
+
+/* CHAPTER 6: MODERN FLEXBOX (Layout King)
+   ---------------------------------------
+   When elements need to be aligned in a row or column.
+*/
+
+.flex-parent {
+    display: flex;
+    flex-direction: row;        /* Horizontal line */
+    justify-content: center;    /* Horizontal alignment */
+    align-items: center;        /* Vertical alignment */
+    flex-wrap: wrap;           /* Elements move to next line if space is less */
+    gap: 20px;                  /* Space between elements (very useful) */
+}
+
+.flex-child {
+    flex: 1;                    /* The element will take up the remaining available space. */
+}
+.flex-item-detailed {
+    /* shorthand for: flex-grow, flex-shrink, flex-basis */
+    flex: 1 0 200px; 
+    /* 1: Grow if space available, 
+       0: Don't shrink below basis, 
+       200px: Ideal starting width */
+}
+
+/* 🚀 PRO TIP: The "Ultimate Center" 
+   The fastest way to center anything (child) inside a container (parent).
+*/
+.center-anything {
+    display: grid;
+    place-items: center; /* Centers horizontally and vertically in 2 words! */
+    min-height: 100vh;
+}
+
+/* 🚀 PRO TIP: Responsive Grid without Media Queries! */
+.smart-grid {
+    display: grid;
+    /* This automatically wraps items when they hit 200px - no @media needed */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* CHAPTER 7: CSS GRID (The Architect)
+   -----------------------------------
+   When complex 2D layouts (rows + columns) need to be created.
+*/
+.grid-layout {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+}
+
+.header { grid-area: header; }
+.main   { grid-area: main; }
+/* This technique makes the layout easier to read. */
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: auto;
+    gap: 15px;
+}
+/* CHAPTER 7.5: ADVANCED UNITS & RATIOS
+   ------------------------------------
+*/
+.responsive-box {
+    width: 50vw;        /* 50% of the Viewport Width */
+    height: 50vh;       /* 50% of the Viewport Height */
+    aspect-ratio: 16/9; /* Keeps the box in cinema shape automatically! */
+    
+    /* Clamp: (min, preferred, max) - Text stays between 16px and 48px */
+    font-size: clamp(1rem, 5vw, 3rem); 
+}
+
+/* CHAPTER 8: RESPONSIVE DESIGN (Media Queries)
+   --------------------------------------------
+   Adjusting the website for mobile, tablet, and desktop devices.
+*/
+/* Auto-detect user's Windows/Phone theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: white;
+    }
+}
+
+/* Tablet View */
+@media (max-width: 992px) {
+    .grid-parent { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile View (The most important) */
+@media (max-width: 600px) {
+    .grid-parent { grid-template-columns: 1fr; } /* Will become one column */
+    .text-styling { font-size: 1rem; }
+}
+
+
+/* CHAPTER 9: TRANSITIONS & ANIMATIONS (The Magic)
+   -----------------------------------------------
+*/
+
+/* 1. Transitions (Smooth effect) */
+.btn {
+    background: var(--primary-color);
+    transition: all var(--transition-fast);
+}
+
+.btn:hover {
+    background: var(--dark-bg);
+    transform: translateY(-5px) scale(1.1); /* Moves slightly upward and becomes larger */
+    cursor: pointer;
+}
+
+/* 2. Keyframe Animations */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-me {
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* 🚀 PRO PERFORMANCE TIP: 
+   Only animate 'transform' and 'opacity'. 
+   Animating 'top', 'left', or 'margin' makes the browser recalculate layout, 
+   which causes "jank" (laggy movement).
+*/
+
+
+/* CHAPTER 10: ADVANCED PRO TIPS
+   -----------------------------
+*/
+
+/* Glassmorphism Effect (Modern Design) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+
+/* Pseudo Elements (Extra Decoration) */
+.title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin-top: 5px;
+}
+
+/* CHAPTER 11: LOGICAL PROPERTIES (Modern Industry Standard)
+   --------------------------------------------------------
+   Instead of thinking Left/Right, think Start/End. 
+   This works perfectly for both English and RTL languages like Urdu.
+*/
+.modern-spacing {
+    margin-inline: auto;  /* Left & Right margin combined */
+    padding-block: 20px;  /* Top & Bottom padding combined */
+    border-inline-start: 5px solid var(--primary-color); /* Border on the 'start' side */
+}
+
+/* CHAPTER 12: BEM (Block Element Modifier)
+   -----------------------------------------
+   Industry standard for naming classes.
+   .block-name__element--modifier
+*/
+
+.card {}               /* Block */
+.card__title {}        /* Element inside block */
+.card__title--large {} /* Modifier (Variant) */
+
+/* Why? So that your CSS does not become messy and other developers can understand it easily. */
